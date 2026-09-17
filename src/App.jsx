@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>📓 Photo Journal</h1>
+        <h1>📓 My Photo Journal</h1>
         <p>Capture a moment with a title, a note, and a picture.</p>
       </header>
 
