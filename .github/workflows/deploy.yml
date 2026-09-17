@@ -47,10 +47,12 @@ jobs:
 
       # 7. Terraform initialization
       - name: Terraform Init
+        working-directory: ./terraform
         run: terraform init
 
       # 8. Terraform apply
       - name: Terraform Apply
+        working-directory: ./terraform
         run: |
           terraform apply -auto-approve \
             -var="project_id=${{ secrets.GCP_PROJECT }}" \
