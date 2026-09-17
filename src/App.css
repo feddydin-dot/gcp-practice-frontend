@@ -1,0 +1,150 @@
+:root {
+  --bg: #faf7f2;
+  --card-bg: #ffffff;
+  --text: #2b2b2b;
+  --muted: #7a7570;
+  --accent: #d97757;
+  --accent-hover: #c56548;
+  --border: #e5ded4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.note-form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.field input[type='text'],
+.field textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+
+.field input[type='text']:focus,
+.field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.field input[type='file'] {
+  font-weight: 400;
+}
+
+.photo-preview img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.add-button {
+  align-self: flex-start;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.add-button:hover {
+  background: var(--accent-hover);
+}
+
+.notes-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+}
+
+.note-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.note-card img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.note-card-body {
+  padding: 1rem 1.25rem;
+}
+
+.note-card-body h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.note-card-body p {
+  margin: 0;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
